@@ -100,6 +100,40 @@ MathJax = {
   .slide :is(b, strong), .slide :is(h1, h2, h3) :is(b, strong) { color: var(--red); }
   .slide ul, .slide ol { padding-left: 1.6em; margin: .5em 0; }
   .slide li { margin: .25em 0; }
+  .slide table {
+    width: 100%; margin: .7em 0 1em;
+    border: 1px solid color-mix(in srgb, var(--blue) 18%, #e5e7eb); border-radius: 8px;
+    border-collapse: separate; border-spacing: 0;
+    overflow: hidden; font-size: .9em; line-height: 1.5;
+  }
+  .slide th, .slide td {
+    padding: .45em .8em; text-align: left; vertical-align: top;
+    border-bottom: 1px solid color-mix(in srgb, var(--blue) 10%, #e5e7eb);
+  }
+  .slide th {
+    color: var(--blue); background: color-mix(in srgb, var(--blue) 8%, white); font-weight: 700;
+  }
+  .slide tbody tr:nth-child(even) { background: color-mix(in srgb, var(--blue) 3%, white); }
+  .slide tbody tr:last-child td { border-bottom: none; }
+  .slide ul:has(> li.task-list-item) { padding-left: 0; list-style: none; }
+  .slide li.task-list-item { list-style: none; margin: .35em 0; }
+  .slide input.task-list-item-checkbox {
+    -webkit-appearance: none; appearance: none;
+    font: inherit;
+    display: inline-grid; place-content: center;
+    width: .85em; height: .85em; margin: 0 .5em 0 0;
+    vertical-align: -.08em;
+    border: 1px solid #d1d9e0; border-radius: .25em;
+    background: #fff; opacity: 1; cursor: default;
+  }
+  .slide input.task-list-item-checkbox:checked {
+    border-color: var(--blue); background: var(--blue);
+  }
+  .slide input.task-list-item-checkbox:checked::before {
+    content: ""; width: .42em; height: .23em;
+    border: solid #fff; border-width: 0 0 .11em .11em;
+    transform: translateY(-.04em) rotate(-45deg);
+  }
   .slide blockquote {
     border-left: 3px solid var(--border); padding: .3em 1.2em; margin: .8em 0;
     color: var(--muted); background: var(--quote-bg);
@@ -115,8 +149,8 @@ MathJax = {
     user-select: none;
   }
   .slide code {
-    font-size: .9em;
-    font-family: "LXGW WenKai Mono", "霞鹜文楷等宽", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 16pt;
+    font-family: "JetBrains Mono", "LXGW WenKai", "LXGW WenKai Mono", "霞鹜文楷等宽", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
   .slide pre {
     background: var(--code-bg); border: 1px solid #e5e7eb; border-radius: 8px;
