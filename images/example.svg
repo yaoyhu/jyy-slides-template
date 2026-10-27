@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="260" viewBox="0 0 720 260" role="img" aria-labelledby="title desc">
+  <title id="title">Markdown 幻灯片构建流程</title>
+  <desc id="desc">Markdown 经 build.py 和模板转换为离线 HTML</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#004098"/>
+    </marker>
+  </defs>
+  <rect width="720" height="260" rx="18" fill="#f5f8fc"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" text-anchor="middle">
+    <rect x="35" y="70" width="175" height="110" rx="12" fill="#ffffff" stroke="#004098" stroke-width="3"/>
+    <text x="122" y="118" font-size="25" font-weight="600" fill="#004098">Markdown</text>
+    <text x="122" y="151" font-size="17" fill="#555555">编写内容</text>
+    <path d="M220 125 H278" stroke="#004098" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="290" y="70" width="175" height="110" rx="12" fill="#004098"/>
+    <text x="377" y="118" font-size="25" font-weight="600" fill="#ffffff">build.py</text>
+    <text x="377" y="151" font-size="17" fill="#dce8f8">套用模板</text>
+    <path d="M475 125 H533" stroke="#004098" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="545" y="70" width="140" height="110" rx="12" fill="#ffffff" stroke="#004098" stroke-width="3"/>
+    <text x="615" y="118" font-size="25" font-weight="600" fill="#004098">HTML</text>
+    <text x="615" y="151" font-size="17" fill="#555555">离线播放</text>
+    <text x="360" y="222" font-size="16" fill="#667085">内容与样式分离 · 可重复构建</text>
+  </g>
+</svg>
